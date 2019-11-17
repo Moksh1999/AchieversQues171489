@@ -5,23 +5,23 @@ public class StringLongestPalindrome{
 
     public static String CheckPalindrome(String str)
     {
-        String str3=str.substring(0,1);
-        int k=str3.length();
+        String str1=str.substring(0,1);
+        int k=str1.length();
 
         for(int i=0;i<str.length();i++)
         {
             for(int j=i+1;j<str.length();j++)
             {
                 String str2=str.substring(i,j);
-                String str1="";
-                for(int z=str.length()-1;z>=0;z--)
+                String str3="";
+                for(int z=str2.length()-1;z>=0;z--)
                 {
-                    str1=str1+str2.charAt(z);
+                    str3=str3+str2.charAt(z);
                 }
-                if(k<str1.length() && str1.equals(str2))
+                if(k<str3.length() && str3.equals(str2))
                 {
-                    str3=str1;
-                    k=str1.length();
+                    str1=str3;
+                    k=str3.length();
                 }
             }
         }
