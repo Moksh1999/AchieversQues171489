@@ -10,8 +10,8 @@ class Node{
 }
 public class LinkedList1 {
     static Node head;
-
-
+ 
+    
     public static LinkedList1 insert(LinkedList1 li,int data)
     {
         Node newnode = new Node(data);
@@ -29,12 +29,12 @@ public class LinkedList1 {
             }
             last.next=newnode;
         }
-
-
-
+       
+        
+        
         return li;
     }
-
+    
     public static void Rotate(LinkedList1 li,int n)
     {
         int k=0;
@@ -46,24 +46,24 @@ public class LinkedList1 {
             current=current.next;
             k++;
         }
-
+    
         Node temp=current;
         while(temp!=null)
         {
             System.out.println(temp.data);
             temp=temp.next;
         }
-
+        
         Node demo=li.head;
         while(demo!=current)
         {
             System.out.println(demo.data);
             demo=demo.next;
         }
-
+        
     }
-
-
+    
+    
     public static void main(String args[])
     {
         LinkedList1 li=new LinkedList1();
@@ -75,7 +75,7 @@ public class LinkedList1 {
             int element=input.nextInt();
             li.insert(li,element);
         }
-
+                
         System.out.println("Time to rotate?");
         int s=input.nextInt();
         li.Rotate(li,s);
