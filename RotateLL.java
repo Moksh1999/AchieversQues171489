@@ -8,7 +8,7 @@ class Node{
         data=d;
     }
 }
-public class RotateLL {
+public class LinkedList1 {
     static Node head;
 
 
